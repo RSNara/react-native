@@ -31,10 +31,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)reportFatalException:(nullable NSString *)message
                        stack:(nullable NSArray<NSDictionary *> *)stack
                  exceptionId:(double)exceptionId;
-- (void)reportJsException:(nullable NSString *)message
-                    stack:(nullable NSArray<NSDictionary *> *)stack
-              exceptionId:(double)exceptionId
-                  isFatal:(bool)isFatal;
 
 @property (nonatomic, weak) id<RCTExceptionsManagerDelegate> delegate;
 

@@ -136,18 +136,6 @@ RCT_EXPORT_METHOD(reportException : (JS::NativeExceptionsManager::ExceptionData 
   }
 }
 
-- (void)reportJsException:(nullable NSString *)message
-                    stack:(nullable NSArray<NSDictionary *> *)stack
-              exceptionId:(double)exceptionId
-                  isFatal:(bool)isFatal
-{
-  if (isFatal) {
-    [self reportFatalException:message stack:stack exceptionId:exceptionId];
-  } else {
-    [self reportSoftException:message stack:stack exceptionId:exceptionId];
-  }
-}
-
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
     (const facebook::react::ObjCTurboModule::InitParams &)params
 {
